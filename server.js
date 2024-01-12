@@ -9,6 +9,10 @@ const app = express();
 
 app.use(express.json());
 
+app.get("/", (req, res) => {
+    res.send("Welcome to my API")
+})
+
 app.use('/api/student', studentRouter)
 // To access file
 
